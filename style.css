@@ -190,19 +190,24 @@ section {
   margin-top: 15px;
   font-size: 18px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 .social-links a {
   color: #00d8ff;
   margin-right: 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
   color: #ffffff;
   text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 .divider {
@@ -226,6 +231,11 @@ section {
 
 .social-links a:hover {
     color: #00e5ff;
+    transform: scale(1.05);
+}
+
+.resume-btn:hover {
+    box-shadow: 0 0 15px #00e5ff;
     transform: scale(1.05);
 }
 
