@@ -184,6 +184,8 @@ section {
 
 .btn:hover {
   background-color: #009ec3;
+  box-shadow: 0 0 15px #00e5ff;
+  transform: scale(1.05);
 }
 
 .social-links {
@@ -234,10 +236,6 @@ section {
     transform: scale(1.05);
 }
 
-.resume-btn:hover {
-    box-shadow: 0 0 15px #00e5ff;
-    transform: scale(1.05);
-}
 
 #skills {
   margin-top: 100px;
@@ -327,6 +325,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
