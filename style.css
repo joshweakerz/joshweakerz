@@ -108,8 +108,8 @@ header {
 }
 
 .header-text p {
-  color: Blue;
-  font-size: 18px;
+  color: #ddd;
+  font-size: 50px;
 }
 
 /* Section styling */
