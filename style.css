@@ -108,7 +108,7 @@ header {
 }
 
 .header-text p {
-  color: #cccccc;
+  color: #ddd;
   font-size: 18px;
 }
 
@@ -287,4 +287,5 @@ section {
   height: 100%;
   border-radius: 10px;
   transition: width 1s ease-in-out;
+
 }
