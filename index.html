@@ -128,8 +128,65 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="particles-config.js"></script>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Initialize AOS -->
+<script>
+  AOS.init({
+    once: false,        // animations can repeat
+    duration: 800,      // default duration
+    easing: 'ease-in-out'
+  });
+</script>
+
+<!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+  // Make sure you have <div id="particles-js"></div> in your HTML
+  particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('Particles loaded');
+  });
+</script>
+
+<!-- Custom JS for navbar click animation replay -->
+<script>
+  const navbarLinks = document.querySelectorAll('nav a');
+
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault(); // prevent default jump
+
+      const targetId = link.getAttribute('href'); // e.g. "#about"
+      const section = document.querySelector(targetId);
+
+      // Smooth scroll to section
+      section.scrollIntoView({ behavior: 'smooth' });
+
+      // Replay animation
+      const animation = section.getAttribute('data-aos');
+      const delay = section.getAttribute('data-aos-delay');
+      const duration = section.getAttribute('data-aos-duration');
+
+      // Remove attributes to reset animation
+      section.removeAttribute('data-aos');
+
+      // Force browser reflow
+      void section.offsetWidth;
+
+      // Re-add attributes
+      section.setAttribute('data-aos', animation);
+      section.setAttribute('data-aos-delay', delay);
+      section.setAttribute('data-aos-duration', duration);
+
+      // Refresh AOS to trigger the animation
+      AOS.refresh();
+    });
+  });
+</script>      
 </body>
 </html>
+
 
 
 
