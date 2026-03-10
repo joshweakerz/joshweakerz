@@ -188,6 +188,8 @@ section {
 
 .social-links {
   margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .social-links a {
@@ -201,6 +203,30 @@ section {
 .social-links a:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+
+.divider {
+    color: #aaa;
+    font-weight: 300;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.social-links a:hover {
+    color: #00e5ff;
+    transform: scale(1.05);
 }
 
 #skills {
@@ -291,6 +317,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
