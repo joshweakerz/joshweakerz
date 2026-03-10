@@ -108,7 +108,7 @@ header {
 }
 
 .header-text p {
-  color: #ddd;
+  color: Blue;
   font-size: 18px;
 }
 
@@ -289,3 +289,4 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
