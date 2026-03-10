@@ -62,11 +62,14 @@ html {
   bottom: -4px;
   left: 0;
   background-color: #00bcd4;
-  transition: width 0.3s;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar a:hover::after {
   width: 100%;
+  box-shadow: 0 0 8px #00bcd4;
+  transform: scaleX(1.05);
+  
 }
 
 /* Header styling */
@@ -325,6 +328,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
