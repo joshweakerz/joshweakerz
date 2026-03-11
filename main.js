@@ -1,23 +1,18 @@
-// Wait until the DOM is ready
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Initialize AOS
+  // 1️⃣ Initialize AOS
   AOS.init({
     once: false,
     duration: 800,
     easing: "ease-in-out"
   });
 
-  // Smooth scroll + replay animation on navbar clicks
+  // 2️⃣ Smooth scroll + replay AOS animations on navbar clicks
   const navbarLinks = document.querySelectorAll('.navbar a');
-
   navbarLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
-
-      // Only handle anchor links to sections
-      if (!targetId.startsWith("#")) return;
-
+      if (!targetId.startsWith("#")) return; // ignore external links
       e.preventDefault();
 
       const section = document.querySelector(targetId);
@@ -26,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Smooth scroll
       section.scrollIntoView({ behavior: "smooth" });
 
-      // Replay AOS animation
+      // Replay AOS animation if it exists
       const animation = section.getAttribute("data-aos");
       const delay = section.getAttribute("data-aos-delay");
       const duration = section.getAttribute("data-aos-duration");
@@ -35,13 +30,18 @@ document.addEventListener("DOMContentLoaded", function () {
         section.removeAttribute("data-aos");
         void section.offsetWidth; // force reflow
         section.setAttribute("data-aos", animation);
-        section.setAttribute("data-aos-delay", delay);
-        section.setAttribute("data-aos-duration", duration);
-
-        // Refresh AOS
+        if (delay) section.setAttribute("data-aos-delay", delay);
+        if (duration) section.setAttribute("data-aos-duration", duration);
         AOS.refresh();
       }
     });
   });
+
+  // 3️⃣ Initialize particles.js safely
+  if (window.particlesJS) {
+    particlesJS.load('particles-js', 'particles-config.js', function() {
+      console.log('Particles.js loaded successfully');
+    });
+  }
 
 });
