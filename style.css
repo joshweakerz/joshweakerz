@@ -183,29 +183,29 @@ footer {
 }
 
 .back-to-top {
-  display: inline-block;
-  margin-top: 8px;
-  color: #00bcd4;           /* your cyan accent */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #00bcd4;
+  font-weight: 700;
+  font-size: 1.05rem;
   text-decoration: none;
-  font-weight: 700;         /* bolder */
-  font-size: 1.05rem;       /* slightly larger */
-  letter-spacing: 0.05em;   /* subtle spacing for clarity */
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.3s ease;
   user-select: none;
 }
 
 .back-to-top:hover {
-  color: #008b99;
-  transform: scale(1.1);    /* subtle pop effect */
-  transform: translateX(5px);
-  stroke: #008b99; /* darker cyan on hover */
+  color: #008b99; /* darker cyan on hover */
 }
 
 .arrow-icon {
-  margin-left: 6px;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.back-to-top:hover .arrow-icon {
+  transform: translateX(6px) rotate(5deg); /* subtle forward slide + tilt */
+  stroke: #008b99; /* matches hover text color */
 }
 
 /* Smooth scroll for in-page navigation */
@@ -373,6 +373,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
