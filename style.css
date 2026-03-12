@@ -185,15 +185,19 @@ footer {
 .back-to-top {
   display: inline-block;
   margin-top: 8px;
-  color: #00bcd4; /* your cyan accent */
+  color: #00bcd4;           /* your cyan accent */
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;         /* bolder */
+  font-size: 1.05rem;       /* slightly larger */
+  letter-spacing: 0.05em;   /* subtle spacing for clarity */
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  user-select: none;
 }
 
 .back-to-top:hover {
   color: #008b99;
+  transform: scale(1.1);    /* subtle pop effect */
 }
 
 /* Smooth scroll for in-page navigation */
@@ -361,6 +365,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
