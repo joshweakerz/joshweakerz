@@ -172,13 +172,14 @@ section ul li {
 
 /* Footer styling */
 footer {
+  background-color: #0c0c0c; /* slightly darker than body */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* subtle separator line */
+  padding: 20px 0;
   text-align: center;
-  padding: 20px;
-  color: white;
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #0c0c0c;
-  
+  font-size: 0.9rem;
+  color: #ccc; /* softer text for footer */
+  user-select: none; /* prevent accidental text selection */
+  font-weight: 400;
 }
 
 /* Smooth scroll for in-page navigation */
@@ -346,6 +347,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
