@@ -174,9 +174,11 @@ section ul li {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #111;
   color: white;
   margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0c0c0c;
+  
 }
 
 /* Smooth scroll for in-page navigation */
@@ -344,6 +346,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
