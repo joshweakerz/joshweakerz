@@ -298,12 +298,16 @@ section {
   padding: 24px;
   margin: 40px auto;
   width: 90%;
-  max-width: 900px;
+  max-width: 1000px;
+}
+
+.card-section:hover {
+  transform: translateY(-5px);
 }
 
 /* 🎨 Section background styles */
 section {
-  padding: 50px 30px;
+  padding: 70px 30px;
 }
 
 #about {
@@ -373,6 +377,7 @@ section {
   transition: width 1s ease-in-out;
 
 }
+
 
 
 
