@@ -312,7 +312,7 @@ section {
 
 #about {
   background-color: #2a2b2c; /* Dark gray */
-  margin-bottom: 30px; /* default is 40px from section{} rule */
+  margin-bottom: 10px; /* default is 40px from section{} rule */
 }
 
 #skills {
