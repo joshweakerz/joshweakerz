@@ -317,6 +317,7 @@ section {
 
 #skills {
   background-color: #2a2b2c; /* Slightly lighter gray */
+  margin-top: 0; /* remove extra gap above Skills */
 }
 
 #experience {
